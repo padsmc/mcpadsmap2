@@ -62,6 +62,24 @@ GENERAL RULES
 13. Maintain consistency throughout the curriculum map.
 """
 
+# ========================================
+# LANGUAGE RULES
+#========================================
+
+LANGUAGE_RULES = """
+LANGUAGE RULES
+
+Determine the dominant language of the curriculum before generating any output.
+
+If more than 70% of the curriculum is Filipino, generate ALL output in Filipino.
+
+If more than 70% of the curriculum is English, generate ALL output in English.
+
+Maintain a consistent language throughout the entire output.
+
+Do NOT mix English and Filipino unless the source curriculum itself mixes both languages.
+"""
+
 # ======================================================
 # LEARNING COMPETENCY RULES
 # ======================================================
@@ -391,6 +409,7 @@ The JSON MUST follow this schema exactly.
 SYSTEM_PROMPT = (
     SYSTEM_ROLE
     + GENERAL_RULES
+    + LANGUAGE_RULES
     + LEARNING_COMPETENCY_RULES
     + ASSESSMENT_RULES
     + ACTIVITY_RULES

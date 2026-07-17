@@ -3,6 +3,7 @@ import json
 import time
 import random
 
+from json_schema import CURRICULUM_MAP_SCHEMA
 from dotenv import load_dotenv
 from google import genai
 from google.genai import types
@@ -37,9 +38,11 @@ def generate_curriculum(prompt):
             response = client.models.generate_content(
                 model=MODEL_NAME,
                 contents=prompt,
+
                 config=types.GenerateContentConfig(
-                    temperature=0.2,
-                    max_output_tokens=8192,
+                temperature=0.2,
+                max_output_tokens=8192,
+                response_mime_type="application/json",
                 ),
             )
 
