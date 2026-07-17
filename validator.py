@@ -6,7 +6,7 @@ def validate_curriculum(data):
     required = [
         "content_standard",
         "performance_standard",
-        "formative_standard",
+        "formation_standard",
         "topics",
     ]
 

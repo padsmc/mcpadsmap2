@@ -94,7 +94,7 @@ def create_curriculum_doc(data):
 
     header[0].text = "CONTENT STANDARD"
     header[1].text = "PERFORMANCE STANDARD"
-    header[2].text = "FORMATIVE STANDARD"
+    header[2].text = "FORMATION STANDARD"
 
     # ----------------------------------------------------
     # Data Row
@@ -104,7 +104,7 @@ def create_curriculum_doc(data):
 
     values[0].text = data.get("content_standard", "")
     values[1].text = data.get("performance_standard", "")
-    values[2].text = data.get("formative_standard", "")
+    values[2].text = data.get("formation_standard", "")
 
     for cell in values:
         for paragraph in cell.paragraphs:
